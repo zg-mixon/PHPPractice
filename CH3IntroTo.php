@@ -301,6 +301,7 @@ _END;
         }
         */
 
+        // Super Globals should always be sanitized by using htmlentities() function
 
 
 
