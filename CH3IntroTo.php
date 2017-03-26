@@ -250,6 +250,59 @@ _END;
 
         // Difference between print and echo (Refer to page 55 in book)
 
+        // Simple function declaration in php example below
+        /*
+        function longdate($timestamp) {
+            return date("l F jS Y", $timestamp);
+        }
+
+        echo longdate(time());
+        */
+
+        // Variable Scope types below
+
+        // Local variable scope example using function example. $temp is created and disposed of inside of the
+        // longdate() function. Function's can only access variables created inside the function and variables outside
+        // of functions can only be accessed by non-function code
+        /*
+        function longdate($timestamp) {
+            $temp = date("l F jS Y", $timestamp);
+            return "The date is $temp";
+        }
+
+        echo longdate(time());
+        */
+
+        // A solution to get around the variable scope limitations is to create variables outside of the function scope
+        // and pass them to the function as arguments. Example below
+        /*
+        $temp = "The date is ";
+        echo longdate($temp, time());
+
+        function longdate($text, $timestamp) {
+            return $text . date("l F jS Y", $timestamp);
+        }
+        */
+
+        // Global variable declaration example below. Global variables should be used sparingly and best practice is to
+        // is to declare the global variables you do have to use in all uppercase similar to constants. More info pg. 59
+        /*
+        global $IS_LOGGED_IN;
+        */
+
+        // Static variable example below. Use case example pg. 59
+        /*
+         * Function made to log how many times it's called by displaying a static variable that iterates its value up
+         * by 1 every single call to the function
+        function test(){
+            static $count = 0;
+            echo $count;
+            $count++;
+        }
+        */
+
+
+
 
     ?>
 </body>
