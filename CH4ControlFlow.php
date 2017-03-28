@@ -111,11 +111,66 @@
     }
     */
 
+    // Basic do-while loop syntax
+    /*
+    $count = 1;
+    do
+        echo "$count times 12 is " . $count * 12 . "<br>";
+    while (++$count <= 12);
+    */
+
+    // Basic for loop syntax below
+    /*
+    for ($count = 1; $count <= 12; ++$count) {
+        echo "$count times 12 is " . $count * 12 . "<br>";
+    }
+    */
+
+    // For loop with multiple operations in each parameter
+    /*
+    for ($i = 1, $j = 1; $i + $j < 10; $i++, $j++) {
+        //
+    }
+    */
+
+    // Breaking out of a loop. Fun little tidbit, you can break up multiple levels in nested statements i.e. break 2
+    // breaks you up two levels.
+    /*
+    $fp = fopen("text.txt", 'wb');
+
+    for($j = 0; $j < 100; $j++) {
+        if (!fwrite($fp, "data")) break;
+    }
+    fclose($fp);
+    */
+
+    // Continue Statement skips current iteration to start running the next iteration based on if certain conditions
+    // are met. Example below insures that you are never dividing by 0.
+    /*
+    $j = 10;
+
+    while ($j > -10) {
+        $j--;
+        if ($j == 0) continue;
+        $result = 10 / $j;
+        echo $result . "<br>";
+    }
+    */
+
+    // Implicit vs Explicit type casting
+    /*
+    $a = 56;
+    $b = 12;
+    $c = $a / $b;
+
+    // Implicit type casting turns $c into a float for specificity sake
+    echo $c;
+
+    // Explicit type casting example below
+    $c = (int) ($a / $b);
+
+    echo $c;
+    */
+
     
-
-
-
-
-
-
 ?>
