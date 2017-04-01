@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -250,7 +250,7 @@
     // More info on pg. 116
 
     // Inheritance syntax - class class_name extends inherited_class_name
-    /*
+
     $user1 = new Subscriber();
     $user1->name = "Fred Johnson";
     $user1->password = "pass";
@@ -281,7 +281,7 @@
             echo "Email: " . $this->email . "<br>";
         }
     }
-    */
+
 
     // Example of parent operator and method overriding. parent::method_name() references one scope up to the parent or
     // inherited class when there are names of methods duplicated and thus overriding
